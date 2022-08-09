@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <title>JS Text Encryptor</title>
+  </head>
+  <body>
+
+  <div class="container-main">
+    <form>
+      <label>
+        <textarea placeholder="Ingrese el texto aqui" autofocus id="inputs"></textarea>
+      </label>
+      <div id="cb">
+        <input type="button" value="ENCRIPTAR" class="button" id="encrypt">
+        <input type="button" value="DESENCRIPTAR" class="button-border" id="decrypt">
+      </div>
+    </form>
+
+  </div>
+
+  <div class="container-right">
+    <div id="nothing">
+      <div id="image"></div>
+      <div id="text">
+        <h4>Ningún mensaje fue encontrado</h4>
+        <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+      </div>
+    </div>
+    <div id="result" style="visibility: hidden">
+      <input type="button" id="copy">
+      <p id="rs-text">
+
+      </p>
+    </div>
+  </div>
+  <script src="js/javascript.js"></script>
+  </body>
+  <footer>
+    <p>Oscar Alberto Paiz Campos, 2022</p>
+  </footer>
+</html>
