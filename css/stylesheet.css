@@ -143,7 +143,7 @@ footer {
         float: bottom;
         margin: 30px 30px 30px 30px;
         width: calc(100vw - 60px);
-        height: calc(20vh - 45px);
+        height: calc(30vh - 45px);
     }
 
     #text{
@@ -172,7 +172,7 @@ footer {
     #rs-text{
         overflow: scroll;
         width: calc(100% - 60px);
-        height: calc(20vh - 100px);
+        height: calc(30vh - 100px);
         color: #0A3871;
         margin-left: 30px;
         font-family: Arial, sans-serif;
