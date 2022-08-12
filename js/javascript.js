@@ -84,15 +84,11 @@ function encrypt(string){
 }
 
 function decrypt(string){
+    let rs = string;
     for (let i = 0; i < array.getSize(); i++){
-        let position = string.indexOf(array.getArray()[i][1]);
-        while (position >= 0) {
-            string = string.slice(0, position) + array.getArray()[i][0] + string.slice(position + array.getArray()[i][1].length);
-            position = string.indexOf(array.getArray()[i][1]);
-        }
+        rs = rs.replaceAll(array.getArray()[i][1], array.getArray()[i][0]);
     }
-
-    return string;
+    return rs;
 }
 
 function println(args) {
@@ -144,4 +140,5 @@ document.getElementById("decrypt").onclick = function (){
 
 document.getElementById("copy").onclick = function (){
     copyToClickBoard();
+    document.getElementById("input-text").value = "";
 }
