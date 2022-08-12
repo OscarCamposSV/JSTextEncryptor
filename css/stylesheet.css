@@ -32,7 +32,8 @@ body{
 }
 
 .button-normal:active{
-    border: none;
+    border-color: rgb(235,245,248);
+    background-color: rgb(13, 141, 206);
 }
 
 .button-normal:hover{
