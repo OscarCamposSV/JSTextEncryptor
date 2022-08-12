@@ -96,33 +96,33 @@ function decrypt(string){
 }
 
 function println(args) {
-    document.getElementById("rs-text").innerHTML = args;
+    document.getElementById("text-rs").innerHTML = args;
 }
 
 function emptyField(){
     let flag;
-    let inputs = document.getElementById("inputs").value;
+    let inputs = document.getElementById("input-text").value;
     flag = inputs != "";
     return flag;
 }
 
 function changes(){
     if (emptyField() == true){
-        document.getElementById("nothing").style.visibility = "hidden";
+        document.getElementById("son").style.visibility = "hidden";
         document.getElementById("result").style.visibility = "visible";
     }
     else {
-        document.getElementById("nothing").style.visibility = "visible";
+        document.getElementById("son").style.visibility = "visible";
         document.getElementById("result").style.visibility = "hidden";
     }
 }
 
 function copyToClickBoard(){
-    let content = document.getElementById('rs-text').innerHTML;
+    let content = document.getElementById('text-rs').innerHTML;
 
     navigator.clipboard.writeText(content)
         .then(() => {
-            alert("Copiado")
+            console.log("copiado")
         })
         .catch(err => {
             console.log('Something went wrong', err);
@@ -130,17 +130,15 @@ function copyToClickBoard(){
 
 }
 
-
-
 document.getElementById("encrypt").onclick = function (){
     changes();
-    let string = document.getElementById("inputs").value;
+    let string = document.getElementById("input-text").value;
     println(encrypt(string));
 }
 
 document.getElementById("decrypt").onclick = function (){
     changes();
-    let string = document.getElementById("inputs").value;
+    let string = document.getElementById("input-text").value;
     println(decrypt(string));
 }
 
